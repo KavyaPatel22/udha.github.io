@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Uganda Development and Health Associates</title>
+  <link rel="icon" type="image/x-icon" href="./Images/favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link rel="stylesheet" href="style.css"> <!-- Link to your custom CSS file -->
+
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="header-content">
+      <div class="logo">
+        <a href="index.html">
+          <img src="./Images/logo.png" alt="UDHA Logo">
+        </a>
+      </div>
+      <nav class="site-nav">
+        <div class="nav-items">
+          <a href="about.html" class="nav-item">About Us</a>
+          <a href="our-work.html" class="nav-item">Our Work</a>
+          <a href="resources.html" class="nav-item">Resources</a>
+          <a href="get-involved.html" class="nav-item">Get Involved</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="banner section">
+    <img src="./Images/IMG_5404.jpg" alt="Banner Image" class="banner-image">
+    <div class="banner-overlay"></div>
+    <img src="./Images/teXT.png" alt="Text Overlay" class="banner-text-overlay">
+  </section>
+
+  <section class="feature-boxes section">
+    <div class="ui stackable grid">
+      <div class="three column row">
+        <div class="column">
+          <div class="ui fade reveal feature-box">
+            <div class="visible content">
+              <div class="box-wrapper" data-label="Box 1">
+                <div class="box-content">
+                  <h3>Box 1</h3>
+                  <p>Content for Box 1</p>
+                </div>
+              </div>
+            </div>
+            <div class="hidden content">
+              <div class="box-wrapper" data-label="Box 1">
+                <div class="box-content">
+                  <h3>Box 1</h3>
+                  <p>Revealed Content for Box 1</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="ui fade reveal feature-box">
+            <div class="visible content">
+              <div class="box-wrapper" data-label="Box 2">
+                <div class="box-content">
+                  <h3>Box 2</h3>
+                  <p>Content for Box 2</p>
+                </div>
+              </div>
+            </div>
+            <div class="hidden content">
+              <div class="box-wrapper" data-label="Box 2">
+                <div class="box-content">
+                  <h3>Box 2</h3>
+                  <p>Revealed Content for Box 2</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="ui fade reveal feature-box">
+            <div class="visible content">
+              <div class="box-wrapper" data-label="Box 3">
+                <div class="box-content">
+                  <h3>Box 3</h3>
+                  <p>Content for Box 3</p>
+                </div>
+              </div>
+            </div>
+            <div class="hidden content">
+              <div class="box-wrapper" data-label="Box 3">
+                <div class="box-content">
+                  <h3>Box 3</h3>
+                  <p>Revealed Content for Box 3</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="three column centered row">
+        <div class="column">
+          <div class="ui fade reveal feature-box">
+            <div class="visible content">
+              <div class="box-wrapper" data-label="Box 4">
+                <div class="box-content">
+                  <h3>Box 4</h3>
+                  <p>Content for Box 4</p>
+                </div>
+              </div>
+            </div>
+            <div class="hidden content">
+              <div class="box-wrapper" data-label="Box 4">
+                <div class="box-content">
+                  <h3>Box 4</h3>
+                  <p>Revealed Content for Box 4</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="ui fade reveal feature-box">
+            <div class="visible content">
+              <div class="box-wrapper" data-label="Box 5">
+                <div class="box-content">
+                  <h3>Box 5</h3>
+                  <p>Content for Box 5</p>
+                </div>
+              </div>
+            </div>
+            <div class="hidden content">
+              <div class="box-wrapper" data-label="Box 5">
+                <div class="box-content">
+                  <h3>Box 5</h3>
+                  <p>Revealed Content for Box 5</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="location section">
+    <div class="ui stackable grid">
+      <div class="row">
+        <div class="eight wide column">
+          <div class="ui raised segment">
+            <h1 class="ui dividing header">Location:</h1>
+            <p>Today, UDHA is located in Iganga District, Iganga Municipal Council, Northern Division, Nkono Village, Balamu
+              Road and has presence in the following fifteen districts: Buyuma, Buikewe, Kalangala in the Central Region
+              of Uganda and Buyende, Kamuli, Kaliro, Namutumba, Iganga, Jinja, Luuka, Mbale, Busia, Bugiri, Namayingo, and
+              Mayuge.</p>
+            <div id="leaflet-map"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="contact-section section">
+    <div class="ui container">
+      <div class="ui stackable grid">
+        <div class="eight wide column">
+          <img src="./Images/669.png" alt="UDHA Logo" style="max-width: 100px;">
+        </div>
+        <div class="eight wide column contact-info">
+          <h2>Contact Information</h2>
+          <p>Email: info@udha.org</p>
+          <p>Phone: +256 123 456 789</p>
+          <p>Address: Iganga District, Uganda</p>
+          <div class="contact-buttons">
+            <a class="ui button primary">Contact Us</a>
+            <a class="ui button secondary">Donate</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+
+</body>
+
+</html>

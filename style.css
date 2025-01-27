@@ -1,0 +1,309 @@
+/* Reset and General Styles */
+body {
+    background-color: #ffffff; /* Entire background color */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrollbars */
+  }
+  
+  .background-wrapper {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1; /* Ensure the background stays behind other content */
+  }
+  
+  .background-image {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* Banner Styles */
+  .banner {
+    position: relative;
+    width: 100vw; /* Full viewport width */
+    height: 700px; /* Fixed height for the banner */
+    overflow: hidden;
+  }
+  
+  .banner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+  }
+  
+  .banner-text,
+  .banner-text-overlay {
+    color: white;
+    text-align: center;
+    z-index: 2;
+  }
+  
+  .banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%); /* Move text down by adjusting Y value */
+    font-size: 2em;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .banner-text h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+  
+  .banner-text p {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+  
+  .banner-text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%); /* Move text down by adjusting Y value */
+    max-width: 90%; /* Ensure it doesn't overflow */
+    padding: 0 10px; /* Add some padding */
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+  }
+  
+  .banner-text-overlay h1 {
+    font-size: calc(24px + 2vw); /* Responsive font size */
+    margin-bottom: 10px;
+  }
+  
+  .banner-text-overlay p {
+    font-size: calc(16px + 1vw); /* Responsive font size */
+    line-height: 1.4;
+  }
+  
+  
+  
+  .feature-box .box-wrapper {
+    width: 100%;
+    height: 100%;
+    background-image: url('./Images/1.png');  /* Ensure consistent background image */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+  }
+  
+  .feature-box p {
+    margin: 0;  /* Reset margin to prevent overflow */
+    padding: 10px;  /* Add some padding */
+    box-sizing: border-box;  /* Ensure content doesn't push the box dimensions */
+  }
+  
+  .feature-box {
+    width: 100%;  /* Full width */
+    max-width: 350px;  /* Ensure the max-width stays the same */
+    height: 350px;  /* Ensure the height stays the same */
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto 10px auto;  /* Reduced bottom margin to decrease space between boxes */
+    box-sizing: border-box;  /* Include padding and borders in width/height */
+  }
+  
+  .feature-box-container {
+    display: flex;
+    flex-wrap: wrap;  /* Allow wrapping to the next line */
+    justify-content: space-between;  /* Distribute boxes evenly */
+    gap: 10px;  /* Reduced gap between boxes */
+  }
+  
+  
+  /* Fade Reveal */
+  .fade.reveal {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .fade.reveal .hidden.content {
+    opacity: 0;
+  }
+  
+  .fade.reveal .visible.content,
+  .fade.reveal .hidden.content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.5s ease;
+  }
+  
+  .fade.reveal:hover .visible.content {
+    opacity: 0;
+  }
+  
+  .fade.reveal:hover .hidden.content {
+    opacity: 1;
+  }
+  
+  /* Footer and Contact */
+  .contact-buttons {
+    margin-top: 20px;
+  }
+  
+  .contact-buttons a {
+    margin: 0 10px;
+  }
+  
+  .contact-info {
+    margin-top: 20px;
+  }
+  
+  .contact-section {
+    background-color: #f0f0f0;
+    padding: 40px 0;
+    text-align: center;
+  }
+  
+  .footer-logo {
+    max-width: 100px;
+  }
+  
+  /* Opaque header specifically for the 'Our Work' page */
+  .page-our-work .site-header {
+    background-color: rgb(36, 97, 26); /* Opaque background color */
+    color: #333; /* Dark text color */
+    padding: 10px 0; /* Padding */
+  }
+  
+  /* General Section Styles */
+  section {
+    padding: 20px;
+    background-color: #ffffff;
+    margin-bottom: 2em;
+  }
+  
+  .section {
+    opacity: 1;
+    transform: translateY(50px); /* Optionally move elements off-screen */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition */
+  }
+  
+  /* Header Styles */
+  .site-header {
+    background-color: transparent; /* Transparent background initially */
+    color: white; /* Light text color */
+    position: fixed; /* Fixed position to stay on top */
+    width: 100%;
+    padding: 10px 0;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1000; /* Ensure header is above other content */
+    transition: background-color 0.2s, padding 0.3s; /* Smooth transition for background and padding */
+  }
+  
+  .site-header .header-content {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 20px;
+  }
+  
+  .site-header .logo img {
+    max-width: 80px;
+  }
+  
+  .site-header .nav-item {
+    color: white;
+    text-decoration: none;
+    padding: 1em;
+    transition: color 0.3s;
+    font-weight: slight bold; 
+    font-size: 15px; 
+    gap: 20px;
+  }
+  
+  .site-header .nav-item:hover {
+    color: #acf7ac; /* Dark green color on hover */
+  }
+  
+  .site-header .site-nav {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .site-header.opaque {
+    background-color: rgb(36, 97, 26); /* White background when scrolled */
+    color: #333; /* Dark text color */
+    padding: 10px 0; /* Padding top and bottom */
+  }
+  
+  /* UI Elements */
+  .ui.raised.segment {
+    border: none;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 1em;
+  }
+  
+  #leaflet-map {
+    height: 400px;
+  }
+  
+  /* Values List */
+  .values-list {
+    margin-top: 20px;
+    font-size: 1.2em;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .value-item {
+    margin: 10px;
+    font-size: 1em;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Box Content */
+  .box-content {
+    padding: 20px;
+  }
+  
+  .box-content h3 {
+    margin-bottom: 10px;
+  }
+  
+  .box-content p {
+    font-size: 14px;
+    color: #fff;
+    margin-bottom: 0;
+  }
+  
+  .box-wrapper {
+    transform: translateY(0);
+  }
+  
